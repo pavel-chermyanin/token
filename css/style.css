@@ -35,6 +35,7 @@ body {
   max-width: 930px;
   padding: 0 15px;
   margin: 0 auto;
+  z-index: 30;
 }
 .container-fluid {
   max-width: 1020px;
@@ -237,9 +238,16 @@ a {
   max-width: 223px;
   overflow: hidden;
 }
+.projects__item-box{
+  position: relative;
+  max-width: 223px;
+  overflow: hidden;
+  margin: 0 auto;
+}
 .projects__item-img {
   position: relative;
   margin-bottom: 14px;
+  max-width: 223px;
 }
 .projects__item-status {
   min-width: 110px;
