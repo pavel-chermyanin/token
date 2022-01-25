@@ -104,8 +104,8 @@
 
   .header__search {
     order: 1;
-    margin-right: 50px;
     margin-top: 15px;
+    width: 100%;
   }
   .menu {
     margin-left: auto;
