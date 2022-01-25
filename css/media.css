@@ -208,6 +208,9 @@
   .logo {
     order: -1;
   }
+  .header__search{
+      width: 80%;
+  }
   .menu {
     order: 1;
     margin-top: 15px;
