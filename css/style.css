@@ -28,11 +28,16 @@ body {
   font-family: "MyriadPro";
   font-weight: 400;
   font-size: 13px;
-  background-color: #292931;
+  background-color: var(--main-color);
 }
 
 .container {
-  max-width: 760px;
+  max-width: 930px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.container-fluid {
+  max-width: 1020px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -59,7 +64,7 @@ a {
 }
 
 .logo {
-  margin-right: 11px;
+  margin-right: 15px;
 }
 
 .header__inner {
@@ -87,11 +92,44 @@ a {
   font-size: 13px;
   color: var(--text-color);
 }
+.menu {
+  margin-left: 10px;
+}
+.menu-burger {
+  display: none;
+  position: relative;
+  background-color: transparent;
+  width: 36px;
+  height: 30px;
+  padding: 5px;
+  cursor: pointer;
+}
+.menu-burger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 20px;
+  background-color: #fff;
+}
+.menu-burger span + span {
+  margin-top: 5px;
+}
+.menu__list-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 92px;
+  z-index: 1;
+  background-color: var(--main-color);
+
+}
 .menu__list {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .menu__list-item + .menu__list-item {
   margin-left: 17px;
 }
@@ -102,12 +140,13 @@ a {
 .menu__list-link--active {
   color: #fff;
 }
-.wallet {
+.wallet-wrapper {
   position: relative;
+}
+.wallet {
   text-align: center;
   padding: 9px 20px;
   min-width: 130px;
-  /* border: 2px solid #fff; */
   color: #fff;
   background-color: #1e1e23;
   border-radius: 20px;
@@ -122,18 +161,16 @@ a {
   width: 136px;
   height: 37px;
   right: 1px;
+  top: -3px;
   background-image: linear-gradient(90deg, #4d55e5, #3270d7, #299dca);
   border-radius: 20px;
+  z-index: -1;
 }
 
-/* ==== projects__title ==== */
-
-.projects__inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* ==== projects ==== */
+.projects {
+  position: relative;
 }
-
 .projects__title {
   position: relative;
   font-weight: 700;
@@ -153,15 +190,21 @@ a {
   position: absolute;
   width: 218px;
   height: 218px;
+  right: 0;
   background-color: #409fd0;
   border-radius: 50%;
 }
 .projects__inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  grid-gap: 40px;
   position: relative;
   list-style: none;
 }
+
 .projects__inner::after {
-  left: -330px;
+  right: 644px;
   content: "";
   position: absolute;
   width: 570px;
@@ -172,8 +215,9 @@ a {
   top: -125px;
   z-index: -1;
 }
+
 .projects__inner::before {
-  right: -195px;
+  left: 621px;
   content: "";
   position: absolute;
   width: 570px;
@@ -184,6 +228,7 @@ a {
   z-index: -1;
   top: 113px;
 }
+
 .projects__item-link {
   background-color: #fff;
   display: block;
@@ -193,9 +238,11 @@ a {
   overflow: hidden;
 }
 .projects__item-img {
+  position: relative;
   margin-bottom: 14px;
 }
 .projects__item-status {
+  min-width: 110px;
   top: 20px;
   left: -10px;
   position: absolute;
