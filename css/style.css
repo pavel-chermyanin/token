@@ -238,12 +238,6 @@ a {
   max-width: 223px;
   overflow: hidden;
 }
-.projects__item-box{
-  position: relative;
-  max-width: 223px;
-  overflow: hidden;
-  margin: 0 auto;
-}
 .projects__item-img {
   position: relative;
   margin-bottom: 14px;

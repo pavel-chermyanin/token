@@ -149,6 +149,14 @@
   .projects__item-link {
     max-width: 100%;
     text-align: center;
+    border-radius: 55px;
+  }
+  .projects__item-img{
+      width: 100%;
+      max-width: 100%;
+  }
+  .projects__item-status{
+      top: 44px;
   }
 }
 @media (max-width: 490px) {
